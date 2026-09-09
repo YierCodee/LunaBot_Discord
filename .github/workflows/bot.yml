@@ -25,7 +25,9 @@ jobs:
 
       - name: Run Discord Bot
         env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
         run: python main.py
